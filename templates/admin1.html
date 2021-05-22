@@ -1,0 +1,799 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>BookStore</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		
+		<link href="{% static '/css/bootstrap.min.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+		<!-- Slick -->
+		
+		<link href="{% static '/css/slick.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+		
+		<link href="{% static '/css/slick-theme.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+		<!-- nouislider -->
+		
+		<link href="{% static '/css/nouislider.min.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+		<!-- Font Awesome Icon -->
+		
+		<link href="{% static '/css/font-awesome.min.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+		<!-- Custom stlylesheet -->
+		
+		<link href="{% static '/css/styleC.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+		<script src="https://kit.fontawesome.com/65476426b2.js" crossorigin="anonymous"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    </head>
+
+	<body>
+		<!-- HEADER -->
+		<header>
+			<!-- TOP HEADER -->
+			<div id="top-header">
+				<div class="container">
+					<ul class="header-links pull-left">
+						<li><a></i> Síguenos </a></li>
+						<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+					</ul>
+					<ul class="header-links pull-right">
+						<li><a href="#"> PQRS </a></li>
+						 <li><a href="http://127.0.0.1:8000/inicio/?">Iniciar Sesión</a></li>
+					    <li><a href="http://127.0.0.1:8000/registro?">Registrarse</a></li>
+					    
+					</ul>
+				</div>
+			</div>
+			<!-- /TOP HEADER -->
+
+			<!-- MAIN HEADER -->
+			<div id="header">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- LOGO -->
+						<div class="col-md-3">
+							<div class="header-logo">
+								<a href="#" class="logo">
+									<img src="{% static '/img/logo.png' %}" alt="Unsplashed background img 1">
+								</a>
+							</div>
+						</div>
+						<!-- /LOGO -->
+
+						<!-- SEARCH BAR -->
+						<div class="col-md-6">
+							<div class="header-search">
+								<form>
+									<select class="input-select">
+										<option value="0">Libros</option>
+									</select>
+									<input class="input" placeholder="Buscar...">
+									<button class="search-btn"><i class="fas fa-search icon"></i></button>
+								</form>
+							</div>
+						</div>
+						<!-- /SEARCH BAR -->
+
+						<!-- ACCOUNT -->
+						<div class="col-md-3 clearfix">
+							<div class="header-ctn">
+								<!-- Wishlist -->
+								<div>
+									<a href="#">
+										<i class="fa fa-heart-o"></i>
+										<div class="qty">0</div>
+									</a>
+								</div>
+								<!-- /Wishlist -->
+
+								<!-- Cart -->
+								<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+										<i class="fa fa-shopping-cart"></i>
+										<div class="qty">0</div>
+									</a>
+									<div class="cart-dropdown">
+										<div class="cart-list">
+											<div class="product-widget">
+												<div class="product-img">
+
+													<img src="./img/product01.png" alt="">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">product name goes here</a></h3>
+													<h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
+												</div>
+												<button class="delete"><i class="fa fa-close"></i></button>
+											</div>
+
+											<div class="product-widget">
+												<div class="product-img">
+													<img src="./img/product02.png" alt="">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">product name goes here</a></h3>
+													<h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
+												</div>
+												<button class="delete"><i class="fa fa-close"></i></button>
+											</div>
+										</div>
+										<div class="cart-summary">
+											<small></h5>
+										</div>
+										<div class="cart-btns">
+											<a href="#">View Cart</a>
+											<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+										</div>
+									</div>
+								</div>
+								<!-- /Cart -->
+
+								<!-- Menu Toogle -->
+								<div class="menu-toggle">
+									<a href="#">
+										<i class="fa fa-bars"></i>
+										<span>Menu</span>
+									</a>
+								</div>
+								<!-- /Menu Toogle -->
+							</div>
+						</div>
+						<!-- /ACCOUNT -->
+					</div>
+					<!-- row -->
+				</div>
+				<!-- container -->
+			</div>
+			<!-- /MAIN HEADER -->
+		</header>
+		<!-- /HEADER -->
+
+		<!-- NAVIGATION -->
+		<nav id="navigation">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav">
+					<!-- NAV -->
+					<ul class="main-nav nav navbar-nav">
+						<li class="active"><a href="http://127.0.0.1:8000/">INICIO</a></li>
+						<li><a href="http://127.0.0.1:8000/novedades">NOVEDADES</a></li>
+						<li><a href="http://127.0.0.1:8000/colecciones">COLECCIONES</a></li>
+						<li><a href="http://127.0.0.1:8000/promociones">PROMOCIONES</a></li>
+					</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
+		<!-- /NAVIGATION -->
+<style>
+html {
+	margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+	-webkit- background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: Roboto;
+}
+.principal{
+	position: absolute;
+	background-color: #0468BF;
+	right: 0px;
+	height: 300px;
+	padding: 300px;
+	width: 100%;
+	max-width: 1350px;
+}
+.menu{
+	position: absolute;
+	background-color:  #ECEAE6;
+	right: 1200px;
+	top: 230px;
+	width: 100px;
+	padding: 200px;
+	height: 600px;
+}
+.contenido{
+	position: absolute;
+	top: 230px;
+	width: 75%;
+	right: 60px;
+	height: 460px;
+	background: rgb(255,255,255);
+	padding: 370px;
+}
+.menu .toggle1{
+	position: absolute;
+	top: 197px;
+	right: 0px;
+	width: 300px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 25px;
+	text-align: center;
+	border-bottom: 2px solid blue;
+	transition: all .5s ease;
+	cursor: pointer;
+}
+#newsletter.section {
+  border-top: 2px solid #E4E7ED;
+  border-bottom: 3px solid #75a9f9;;
+  margin-top: 600px;
+}
+.menu .toggle1 a{
+	letter-spacing: 1px;
+}
+.menu .toggle1:hover{
+	border-bottom: 2px solid #ff851b;
+}
+.menu .toggle2{
+	position: absolute;
+	top: 250px;
+	right: 0px;
+	width: 300px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 25px;
+	text-align: center;
+	border-bottom: 2px solid blue;
+	transition: all .5s ease;
+	cursor: pointer;
+}
+.menu .toggle2 a{
+	letter-spacing: 1px;
+}
+.menu .toggle2:hover{
+	border-bottom: 2px solid #ff851b;
+}
+.menu .toggle3{
+	position: absolute;
+	top: 300px;
+	right: 0px;
+	width: 300px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 25px;
+	text-align: center;
+	border-bottom: 2px solid blue;
+	transition: all .5s ease;
+	cursor: pointer;
+
+}
+.menu .toggle3 a{
+	letter-spacing: 1px;
+}
+.menu .toggle3:hover{
+	border-bottom: 2px solid #ff851b;
+}
+.menu .toggle4{
+	position: absolute;
+	top: 350px;
+	right: 0px;
+	width: 300px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 25px;
+	text-align: center;
+	border-bottom: 2px solid blue;
+	transition: all .5s ease;
+	cursor: pointer;
+}
+.menu .toggle4 a{
+	letter-spacing: 1px;
+}
+.menu .toggle4:hover{
+	border-bottom: 2px solid #ff851b;
+}
+.menu .toggle5{
+	position: absolute;
+	top: 400px;
+	right: 0px;
+	width: 300px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 25px;
+	text-align: center;
+	border-bottom: 2px solid blue;
+	transition: all .5s ease;
+	cursor: pointer;
+}
+.menu .toggle5 a{
+	letter-spacing: 1px;
+}
+.menu .toggle5:hover{
+	border-bottom: 2px solid #ff851b;
+}
+.menu .toggle6{
+	position: absolute;
+	top: 450px;
+	right: 0px;
+	width: 300px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 25px;
+	text-align: center;
+	border-bottom: 2px solid blue;
+	transition: all .5s ease;
+	cursor: pointer;
+}
+.menu .toggle6 a{
+	letter-spacing: 1px;
+}
+.menu .toggle6:hover{
+	border-bottom: 2px solid #ff851b;
+}
+.menu h3{
+	position: absolute;
+	top: 65px;
+	right: 170px;
+}
+.menu .menu_toggles{
+	position: absolute;
+	right: 60px;
+	top: -10px;
+}
+.contenido h2{
+	position: absolute;
+	top: 0px;
+}
+.contenido h2{
+	position: absolute;
+	top: 5px;
+	right: 600px;
+	font-size: 20px;				
+}
+.columnaizquiera {
+	position: absolute;
+	top: 80px;
+	right: 700px;
+}
+.columnaizquiera .seleciontipo select{ 
+	padding: 2px 70px;
+}
+.columnaizquiera .imput2 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaizquiera .imput3 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaizquiera .imput4 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaizquiera .imput5 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaizquiera .seleciontip select{ 
+	padding: 2px 70px;
+}
+.columnaderecha {
+	position: absolute;
+	top: 80px;
+	right: 350px;
+}
+.columnaderecha .imput6 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaderecha .imput7 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaderecha .imput8 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaderecha .imput9 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaderecha .imput10 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.menu_togglesperfil .toggle1{
+	position: absolute;
+	top: 40px;
+	right: 300px;
+	width: 750px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 41px;
+	text-align: justify;
+	border-bottom: 2px solid black;
+	transition: all .5s ease;
+	cursor: pointer;
+}
+.menu_togglesperfil .toggle1 a{
+	letter-spacing: 1px;
+}
+.menu_togglesperfil .toggle1:hover{
+	border-bottom: 2px solid blue;
+}
+.perfilCliente{
+	position: absolute;
+	top: 20px;
+	right: -50px;
+}
+.perfilCliente{
+	position: absolute;
+	right: 0px;
+}
+.partecontraseña{
+	position: absolute;
+	top: 500px;
+	right: 900px;
+}
+.columnaizquierdacontraseña{ 
+	position: absolute;
+	top: -20px;
+	right: 70px;
+	}
+.columnaizquierdanueva{ 
+	position: absolute;
+	top: 20px;
+	right: 70px;
+	}
+.columnaizquierdaconfirmacion{ 
+	position: absolute;
+	top: 60px;
+	right: 70px;
+	}
+.columnaderechaactual{ 
+	position: absolute;
+	top: -20px;
+	right: -400px;
+	}
+.columnaderechaactual input[type ="password"]{ 
+	padding: 2px 60px;
+}
+.columnaderechanueva{ 
+	position: absolute;
+	top: 20px;
+	right: -400px;
+	}
+.columnaderechanueva input[type ="password"]{ 
+	padding: 2px 60px;
+}
+.columnaderechaconfirmacion{ 
+	position: absolute;
+	top: 60px;
+	right: -400px;
+	}
+.columnaderechaconfirmacion input[type ="password"]{ 
+	padding: 2px 60px;
+}
+.menu_togglescontraseña .toggle1{
+	position: absolute;
+	top: -80px;
+	right: -600px;
+	width: 750px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 41px;
+	text-align: justify;
+	border-bottom: 2px solid black;
+	transition: all .5s ease;
+	cursor: pointer;
+}
+.menu_togglescontraseña .toggle1 a{
+	letter-spacing: 1px;
+}
+.menu_togglescontraseña .toggle1:hover{
+	border-bottom: 2px solid blue;
+}
+
+	
+</style>
+        <!-- SUBINTEMS -->
+		<div id="items" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="items-two">
+							<li><a href="#">INICIO</a></li>
+							<li><a href="#">COLECCIONES</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SUBINTEMS -->
+
+        <!-- SECTION PROMOCIONES-->
+		<!--div class="section">
+			<!-- container -->
+			<!--div class="container">
+				<!-- row -->
+				<!--div class="row">
+					<!-- shop -->
+                        <!-- SLIDER -->
+                        <!--img src="{% static '/img/Colecciones2.png' %}" alt="Unsplashed background img 1">
+                            
+                        </div>
+                    <!-- SLIDER -->
+                    <!-- /shop -->
+				<!--/div>
+				<!-- /row -->
+			<!--/div>
+			<!-- /container -->
+		<!--/div>
+		<!-- /SECTION PROMOCIONES -->
+
+		<!--ASIDE-->
+		<aside>
+			<div class="menu">
+					<i class="fas fa-user-circle" style="font-size: 50px;top: 65px;position: absolute;right: 120px;"></i>
+					<h3>Administrador</h3>
+					<a style="position: absolute;text-align: justify;top: 95px;right: 190px;">Bienvenido</a>
+					<div class="menu_toggles">
+						<div class="toggle1">
+							<a  href="http://127.0.0.1:8000/Inicio_Sesion/Cliente"><i class="fas fa-address-book">Cuenta </i></a>
+						</div>
+						<div class="toggle2">
+							<a  href="http://127.0.0.1:8000/Inicio_Sesion/Cliente"><i class="fa fa-book">Administrar Libro </i></a>
+						</div>
+						<div class="toggle3">
+							<a  href="http://127.0.0.1:8000/Inicio_Sesion/Cliente"><i class="fa fa-cart-plus">Administrar Noticia </i></a>
+						</div>
+						<div class="toggle4">
+							<a  href="http://127.0.0.1:8000/Inicio_Sesion/Cliente"><i class="fas fa-dolly">Inventario </i></a>
+						</div>
+						<div class="toggle5">
+							<a  href="http://127.0.0.1:8000/Inicio_Sesion/Cliente"><i class="fa fa-close">Historico de Libros Agotados</i></a>
+						</div>
+						<div class="toggle6">
+							<a  href="http://127.0.0.1:8000/Inicio_Sesion/Cliente"><i class="fa fa-times-circle">Cerrar Sesión </i></a>
+						</div>
+					</div>
+				</div>
+		</aside>
+		<!--/ASIDE-->
+
+        <!-- SECTION CUENTA-->
+	  		<div class="contenido">
+					<h2>Administrar Perfil</h2>
+					<div class="menu_togglesperfil">
+						<div class="toggle1">
+							<a>Información Personal </a>
+						</div>
+					</div>
+					<div class="perfilCliente">
+						<form method="post">
+							{% csrf_token%}
+							
+							<div class="columnaizquiera">
+								<div >
+									<td>Tipo de Documento</td>
+									<h4></h4>
+									<div class="seleciontipo">
+										<select name="MartialStatus">
+											<option value="Cedula de ciudadania">Cedula de ciudadania</option>
+											<option value="Tarjeta Identidad">Tarjeta Identidad</option>
+											<option value="Cedula Extranjera">Cedula Extranjera</option>
+										</select>
+									</div>
+								</div>
+								<div class="imput2">
+									<td>Nombre(s)</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Nombre(s)" name="Username" required>
+								</div>
+								<div class="imput3">
+									<td>Fecha De Nacimiento</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Fecha De Nacimiento" name="Username" required>	
+								</div>
+								<div class="imput4">
+									<td>Dirección</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Dirección" name="Username" required>	
+								</div>
+								<div class="imput5">
+									<td>Genero</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Genero" name="Username" required>	
+								</div>
+							</div>
+							<div class="columnaderecha">
+								
+								<div class="imput6">
+									<td>Numero De Documento</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Numero De Documento" name="Username" required>
+								</div>
+								<div class="imput7">
+									<td>Apellido(s)</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Apellido(s)" name="Username" required>	
+								</div>
+								<div class="imput8">
+									<td>Lugar De Nacimiento</td>
+									<h4></h4>
+									<input type="text"  placeholder="Lugar De Documento" name="Username" required>	
+								</div>
+								<div class="imput9">
+									<td>Telefono Celular</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Telefono Celular" name="Username" required>	
+								</div>
+								<div class="imput10">
+									<td>Correo Electronico</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Correo Electronico" name="Username" required>	
+								</div>
+							</div>
+							
+							<div class="partecontraseña">
+								<div class="menu_togglescontraseña">
+									<div class="toggle1">
+										<a>Información Contraseña </a>
+									</div>
+								</div>
+								<div class="columnaizquierdacontraseña">
+									<h6>Contraseña actual:</h6>
+									<h4></h4>
+									<h4></h4>
+								</div>
+								<div class="columnaizquierdanueva">
+									<h6>Contraseña nueva:</h6>
+									<h4></h4>
+									<h4></h4>
+								</div>
+								<div class="columnaizquierdaconfirmacion">
+									<h6>Confirmar contraseña:</h6>
+									<h4></h4>
+									<h4></h4>
+								</div>
+								<div class="columnaderechaactual">
+									<input type="password"  placeholder="Ingrese la contraseña actual" name="actual" required>
+								</div>>
+								<div class="columnaderechanueva">
+									<input type="password"  placeholder="Digite nueva contraseña" name="nueva" required>
+								</div>
+								<div class="columnaderechaconfirmacion">
+									<input type="password"  placeholder="Confirmar contraseña" name="Confirmar" required>
+								</div>
+								
+							</div>	
+						</form>
+					</div>
+				</div>
+	  		<div></div>
+	  		<div></div>
+	  	
+  	
+  	<!-- /SECTION CUENTA-->
+ 				
+
+
+		<!-- SIGUENOS BOOKSTORE -->
+		<div id="newsletter" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="newsletter">
+							<p>Síguenos <strong>BookStore</strong></p>
+							<ul class="newsletter-follow">
+								<li>
+									<a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-instagram"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SIGUENOS NEWSLETTER -->
+
+		<!-- FOOTER -->
+		<footer id="footer">
+			<!-- top footer -->
+			<div class="section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">INFORMACIÓN LEGAL</h3>
+								<ul class="footer-links">
+									<li><a href="#"><i class="fas fa-desktop"></i>bookstore.com</a></li>
+									<li><a href="#"><i class="fas fa-phone-alt"></i>3208764563-(3)3313098</a></li>
+									<li><a href="#"><i class="fas fa-map-marker-alt"></i>Cra 9 No. 45-80 - Pereira - Colombia</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">CORPORATIVO</h3>
+								<ul class="footer-links">
+									<li><a href="#">Quiénes somos</a></li>
+									<li><a href="#">Sedes</a></li>
+									<li><a href="#">Eventos</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="clearfix visible-xs"></div>
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /top footer -->
+
+			<!-- bottom footer -->
+			<div id="bottom-footer" class="section">
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<span class="copyright">
+                                © BookStore 2021-Todos los derechos reservados
+							</span>
+						</div>
+					</div>
+						<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /bottom footer -->
+		</footer>
+		<!-- /FOOTER -->
+
+		<!-- jQuery Plugins -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
+		<script src="js/jquery.zoom.min.js"></script>
+		<script src="js/main.js"></script>
+
+	</body>
+</html>
